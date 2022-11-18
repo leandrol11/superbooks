@@ -1,25 +1,24 @@
-import logo from './logo.svg';
-import './App.css';
+import Header from './components/Header'
+import styled from "styled-components"
+import Search from './components/Search'
+import Latest from './components/Latest'
+import Footer from './components/Footer'
+
+
+const AppContainer = styled.section`
+  height: 100%;
+  background-image: linear-gradient(90deg, #002f52 35%, #326589 165%);
+`
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <AppContainer>
+      <Header />
+      <Search />
+      <Latest />
+      <Footer />
+    </AppContainer>
+  )
 }
 
-export default App;
+export default App
